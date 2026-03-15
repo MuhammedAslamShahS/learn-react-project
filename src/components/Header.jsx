@@ -18,7 +18,7 @@ const Header = () => {
                 top: 0,
                 left: 0,
                 right: 0,
-                zIndex: 1000
+                zIndex: 1000,
             }}
         >
             <div className="left" style={{ fontSize: "26px" }}>
@@ -32,7 +32,7 @@ const Header = () => {
                         listStyle: "none",
                         padding: 0,
                         margin: 0,
-                        gap: "20px"
+                        gap: "20px",
                     }}
                 >
                     <li>Home</li>

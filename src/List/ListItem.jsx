@@ -18,15 +18,36 @@ const ListItem = ({ title, number, content, items = [], Activity }) => {
             }}
         >
             <div>
-                <h3 style={{color:"rgba(3, 32, 49, 0.67)"}}>
+                <h3 style={{ color: "rgba(3, 32, 49, 0.67)" }}>
                     {title} {number}
                 </h3>
             </div>
 
-            <p style={{color:"rgba(3, 32, 49, 0.67)"}}>{content}</p>
+            <p style={{ color: "rgba(3, 32, 49, 0.67)" }}>{content}</p>
             <ul style={{ display: "flex", gap: "15px", padding: 0, listStyle: "none" }}>
                 {items.map((item, index) => (
-                    <li key={index} style={Activity ?{ width: "70px",textAlign:"center" , background: " rgba(16, 116, 178, 0.67)", color: "white", borderRadius: "5px"} :{ width: "70px",textAlign:"center" , background: " rgba(178, 16, 16, 0.67)", color: "white", borderRadius: "5px"} }>{item}</li>
+                    <li
+                        key={index}
+                        style={
+                            Activity
+                                ? {
+                                      width: "70px",
+                                      textAlign: "center",
+                                      background: " rgba(16, 116, 178, 0.67)",
+                                      color: "white",
+                                      borderRadius: "5px",
+                                  }
+                                : {
+                                      width: "70px",
+                                      textAlign: "center",
+                                      background: " rgba(178, 16, 16, 0.67)",
+                                      color: "white",
+                                      borderRadius: "5px",
+                                  }
+                        }
+                    >
+                        {item}
+                    </li>
                 ))}
             </ul>
         </div>

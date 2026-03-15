@@ -1,9 +1,9 @@
-import ListItem from "../List/ListItem"
-
-ListItem
-const Footer = () => {
-  return (
-    <div className="app-body" style={{ paddingTop: "60px", paddingLeft: "100px", paddingRight: "100px" }}>
+import React from "react";
+import ListItem from "../List/ListItem";
+const ListSection = () => {
+    return (
+        <div>
+            <div className="app-body" style={{ paddingTop: "60px", paddingLeft: "100px", paddingRight: "100px" }}>
                 <ListItem
                     title={"title"}
                     number={1}
@@ -13,8 +13,10 @@ const Footer = () => {
                 />
                 <ListItem number={2} />
                 <ListItem number={3} />
+                
             </div>
-  )
-}
+        </div>
+    );
+};
 
-export default Footer
+export default ListSection;
