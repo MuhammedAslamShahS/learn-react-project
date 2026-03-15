@@ -7,7 +7,7 @@ const App = () => {
     return (
         <div>
             <Header />
-            <ListSection/>
+            <ListSection />
             <Footer />
         </div>
     );

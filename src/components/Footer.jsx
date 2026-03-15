@@ -1,20 +1,21 @@
-import ListItem from "../List/ListItem"
+import React from "react";
 
-ListItem
 const Footer = () => {
-  return (
-    <div className="app-body" style={{ paddingTop: "60px", paddingLeft: "100px", paddingRight: "100px" }}>
-                <ListItem
-                    title={"title"}
-                    number={1}
-                    content={"This is description section, to explain about the list."}
-                    items={["Item 1", "Item 2", "Item 3", "Item 4"]}
-                    Activity={true}
-                />
-                <ListItem number={2} />
-                <ListItem number={3} />
-            </div>
-  )
-}
+    return (
+        <footer
+            style={{
+                paddingTop: "60px",
+                paddingLeft: "100px",
+                paddingRight: "100px",
+                marginTop: "40px",
+                borderTop: "1px solid #ccc",
+                textAlign: "center",
+                color: "#666",
+            }}
+        >
+            <p>&copy; 2024 Aslam Shah. All rights reserved.</p>
+        </footer>
+    );
+};
 
-export default Footer
+export default Footer;
