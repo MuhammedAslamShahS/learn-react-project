@@ -1,4 +1,16 @@
+import { useState, useEffect } from "react";
+
 const Counter = () => {
+    const [value, setValue] = useState(0);
+
+    useEffect(()=>{
+      console.log("Inside UseEffect" + value);
+
+      return(()=>{
+        console.log('cleanup' + value)
+      })
+    },[value]);
+
     return (
         <div
             style={{
@@ -6,7 +18,7 @@ const Counter = () => {
                 background: "",
                 display: "flex",
                 alignContent: "center",
-                justifyContent: "center"
+                justifyContent: "center",
             }}
         >
             <div
@@ -19,13 +31,27 @@ const Counter = () => {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    gap: "20px"
+                    gap: "20px",
                 }}
             >
-                <h2>0</h2>
-                <div style={{display:"flex", gap: "20px"}}>
-                    <button style={{ width: "50px", height: "50px" }}>-</button>
-                    <button style={{ width: "50px", height: "50px" }}>+</button>
+                <h2>{value}</h2>
+                <div style={{ display: "flex", gap: "20px" }}>
+                    <button
+                        onClick={() => {
+                            setValue(value - 1);
+                        }}
+                        style={{ width: "50px", height: "50px" }}
+                    >
+                        -
+                    </button>
+                    <button
+                        onClick={() => {
+                            setValue(value + 1);
+                        }}
+                        style={{ width: "50px", height: "50px" }}
+                    >
+                        +
+                    </button>
                 </div>
             </div>
         </div>
