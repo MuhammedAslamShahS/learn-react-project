@@ -1,14 +1,22 @@
-import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Main_Home from "./pages/Main_Home";
+import Usage from "./pages/Usage";
+import Settings from "./pages/Settings";
+import Logout from "./pages/Logout";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import ListSection from "./components/ListSection";
+import Counter from "./pages/Counter";
 
 const App = () => {
     return (
         <div>
-            <Header />
-            <ListSection />
-            <Footer />
+            <Header/>
+            <Routes>
+                <Route path="/" element={<Main_Home />} />
+                <Route path="/usage" element={<Usage />} />
+                <Route path="/settings" element={<Settings />} />
+                <Route path="/logout" element={<Logout />} />
+                <Route path="/counter" element={<Counter />} />
+            </Routes>
         </div>
     );
 };

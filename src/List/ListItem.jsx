@@ -36,6 +36,7 @@ const ListItem = ({ title, number, content, items = [], Activity }) => {
                                       background: " rgba(16, 116, 178, 0.67)",
                                       color: "white",
                                       borderRadius: "5px",
+                                      cursor: "pointer"
                                   }
                                 : {
                                       width: "70px",
@@ -43,8 +44,10 @@ const ListItem = ({ title, number, content, items = [], Activity }) => {
                                       background: " rgba(178, 16, 16, 0.67)",
                                       color: "white",
                                       borderRadius: "5px",
+                                      cursor: "pointer"
                                   }
                         }
+                        onClick={() => {console.log('clicked')}}
                     >
                         {item}
                     </li>

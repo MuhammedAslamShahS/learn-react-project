@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -35,10 +36,34 @@ const Header = () => {
                         gap: "20px",
                     }}
                 >
-                    <li>Home</li>
-                    <li>Usage</li>
-                    <li>Settings</li>
-                    <li>Logout</li>
+                    <li>
+                        <NavLink to="/" style={{ color: "white", textDecoration: "none" }}>
+                            Home
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/usage" style={{ color: "white", textDecoration: "none" }}>
+                            Usage
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/counter" style={{ color: "white", textDecoration: "none" }}>
+                            Counter
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/settings" style={{ color: "white", textDecoration: "none" }}>
+                            Settings
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/logout" style={{ color: "white", textDecoration: "none" }}>
+                            Logout
+                        </NavLink>
+                    </li>
                 </ul>
             </div>
         </div>
